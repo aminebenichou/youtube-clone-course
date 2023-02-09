@@ -1,0 +1,51 @@
+body{
+    background-color: #101113;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    display: flex;
+
+}
+.left div{
+    background-color: rgb(48, 48, 48);
+    padding: 15px;
+    border: .2px solid rgb(31, 2, 2);
+    margin: 5px;
+    border-radius: 5px;
+}
+.left .active{
+    background-color: red;
+}
+.left div:hover{
+    background-color: red;
+    cursor: pointer;
+
+}
+
+#search{
+ border-radius: 25px;
+ background-color: rgb(48, 48, 48);
+ border: 0px;
+ padding: 8px;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.right *{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.right img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
