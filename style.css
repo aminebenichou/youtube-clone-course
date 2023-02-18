@@ -2,12 +2,48 @@ body{
     background-color: #101113;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
 
+}
+aside{
+    background-color: #1f2124;
+    height: 100vh;
+    width: 20%;
+    text-align: center;
+    
+}
+.header{
+    display: flex;
+    align-items: start;
+    
+}
+.logo{
+    width: 150px;
+    
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.btn-side{
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;   
+}
+.sidebar .active{
+    border-right: 5px solid red;
+}
+.btn-side:hover{
+    background-color: rgb(44, 35, 35);
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .left{
     display: flex;
