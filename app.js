@@ -15,9 +15,17 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
     .then(response => response.json())
     .then(response => {
         while (i < response.items.length) {
-            thumbnails_resp = response.items[0].snippet.thumbnails.default.url
-            i++
+            // getting our elemnt
+            const card = document.getElementsByClassName("card")[0]
 
+            //cloning the card
+            var clones = card.cloneNode(true)
+
+
+
+            /*thumbnails_resp = response.items[0].snippet.thumbnails.default.url
+            i++
+            console.log(response);
             var thumbnails = document.getElementsByClassName("thumbnail")
             var j = 0;
             while (j < thumbnails.length) {
@@ -25,6 +33,10 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
                 console.log(thumbnails_resp)
                 j++
             }
+            var title = document.getElementsByClassName("title")
+            var t=0
+            title[0].innerHTML = response.items[i].snippet.title*/
+            i++;
         }
     })
     .catch(err => console.error(err));
