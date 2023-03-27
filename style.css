@@ -110,3 +110,7 @@ aside{
 .card:hover{
     margin-top: 40px;
 }
+
+.container{
+    display: flex;
+}

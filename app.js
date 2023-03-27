@@ -16,11 +16,11 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
     .then(response => {
         while (i < response.items.length) {
             // getting our elemnt
-            const card = document.getElementsByClassName("card")[0]
+            const card = document.getElementsByClassName("card-link")[0]
 
             //cloning the card
             var clones = card.cloneNode(true)
-
+            card.after(clones)
 
 
             /*thumbnails_resp = response.items[0].snippet.thumbnails.default.url
