@@ -2,6 +2,20 @@ var side_button = document.getElementsByClassName("btn-side");
 const btn = document.getElementById("btn")
 btn.addEventListener("click", (e) => console.log("hey"))
 
+
+var video = document.getElementsByClassName("card-link")[0]
+
+// video.addEventListener("click", (e)=>{
+//     document.cookie="videoId=123"
+
+    
+// })
+
+
+function getVideo(id) {
+    console.log(id);
+}
+
 const options = {
     method: 'GET',
     headers: {
@@ -27,6 +41,7 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
 
             // console.log(response);
             var thumbnails = document.getElementsByClassName("thumbnail")
+            var card_link = document.getElementsByClassName("card-link")
             var j = 0;
             while (j < thumbnails.length) {
                 thumbnails_resp = response.items[j].snippet.thumbnails.default.url
@@ -36,6 +51,8 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
                 var title = document.getElementsByClassName("title")
                 
                 title[j].innerHTML = response.items[j].snippet.title
+                card_link[j].onclick = getVideo(response.items[j].id.videoId)
+                
                 j++
             }
             
@@ -46,4 +63,7 @@ fetch('https://youtube-v31.p.rapidapi.com/search?q=music&part=snippet%2Cid&regio
 
 
 
-    var video = document.getElementsByClassName("card-link")
+
+
+
+
